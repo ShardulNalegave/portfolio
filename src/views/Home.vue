@@ -16,6 +16,27 @@
               <v-icon left>my_location</v-icon>
               {{ user.location }}
             </h1>
+            <div style="height: 20px;"></div>
+            <a :href="user.html_url" target="_blank">
+              <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
+                fa-github
+              </v-icon>
+            </a>
+            <a href="https://www.instagram.com/shardul_nalegave/" target="_blank">
+              <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
+                fa-instagram
+              </v-icon>
+            </a>
+            <a href="https://medium.com/@nalegaveshardul40" target="_blank">
+              <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
+                fa-medium
+              </v-icon>
+            </a>
+            <a href="https://www.linkedin.com/in/shardul-nalegave-370156154/" target="_blank">
+              <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
+                fa-linkedin
+              </v-icon>
+            </a>
             <div style="height: 30px;"></div>
             <div>
               <h1 class="headline" style="display: inline-block; font-family: 'Nunito', sans-serif !important;">I am a</h1>
