@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    <v-img :src="`${publicPath}images/home_background.jpg`" style="position: fixed; max-width: 100%; max-height: 100%;" cover></v-img>
-    <v-content style="padding: 40px;" v-if="!(screen.width < 960)">
+    <v-img :src="`${publicPath}images/home_background.jpg`" style="position: fixed; max-width: 100%; max-height: 100%; top: 0; left: 0; right: 0; bottom: 0;" cover></v-img>
+    <v-content style="padding: 40px;" id="desktopPage">
       <div style="width: 100%; border-radius: 15px; padding: 50px;" class="elevation-5 white">
         <v-row no-gutters style="height: 95%;" v-if="!isLoading">
           <v-col cols="7" align-self="center" style="padding: 30px;">
@@ -17,27 +17,27 @@
               {{ user.location }}
             </h1>
             <div style="height: 20px;"></div>
-            <a :href="user.html_url" target="_blank">
+            <a :href="user.html_url" target="_blank" style="text-decoration: none;">
               <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
                 fa-github
               </v-icon>
             </a>
-            <a href="https://www.instagram.com/shardul_nalegave/" target="_blank">
+            <a href="https://www.instagram.com/shardul_nalegave/" target="_blank" style="text-decoration: none;">
               <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
                 fa-instagram
               </v-icon>
             </a>
-            <a href="https://medium.com/@nalegaveshardul40" target="_blank">
+            <a href="https://medium.com/@nalegaveshardul40" target="_blank" style="text-decoration: none;">
               <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
                 fa-medium
               </v-icon>
             </a>
-            <a href="https://www.linkedin.com/in/shardul-nalegave-370156154/" target="_blank">
+            <a href="https://www.linkedin.com/in/shardul-nalegave-370156154/" target="_blank" style="text-decoration: none;">
               <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
                 fa-linkedin
               </v-icon>
             </a>
-            <a href="mailto:nalegaveshardul40@gmail.com" target="_blank">
+            <a href="mailto:nalegaveshardul40@gmail.com" target="_blank" style="text-decoration: none;">
               <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
                 fa-envelope
               </v-icon>
@@ -89,6 +89,46 @@
         </h1>
       </div>
     </v-content>
+    <v-content style="padding: 40px;" id="mobilePage">
+      <div style="border-radius: 15px; padding: 40px; text-align: center;" class="elevation-5 white">
+        <v-avatar size="80">
+          <img :src="user.avatar_url" alt="Shardul">
+        </v-avatar>
+        <div style="height: 15px;"></div>
+        <h1 class="title" style="font-family: 'Nunito', sans-serif !important;">Hello, I am</h1>
+        <h1 class="display-1" style="font-family: 'Quicksand', 'Nunito', sans-serif !important; font-size: 40px !important;">{{ user.name }}</h1>
+        <div style="height: 10px;"></div>
+          <h1 class="subtitle-1" style="font-family: 'Overpass Mono', monospace !important; font-size: 13px !important;">
+            {{ user.location }}
+          </h1>
+          <div style="height: 20px;"></div>
+          <a :href="user.html_url" target="_blank" style="text-decoration: none;">
+            <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
+              fa-github
+            </v-icon>
+          </a>
+          <a href="https://www.instagram.com/shardul_nalegave/" target="_blank" style="text-decoration: none;">
+            <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
+              fa-instagram
+            </v-icon>
+          </a>
+          <a href="https://medium.com/@nalegaveshardul40" target="_blank" style="text-decoration: none;">
+            <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
+              fa-medium
+            </v-icon>
+          </a>
+          <a href="https://www.linkedin.com/in/shardul-nalegave-370156154/" target="_blank" style="text-decoration: none;">
+            <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
+              fa-linkedin
+            </v-icon>
+          </a>
+          <a href="mailto:nalegaveshardul40@gmail.com" target="_blank" style="text-decoration: none;">
+            <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
+              fa-envelope
+            </v-icon>
+          </a>
+      </div>
+    </v-content>
   </v-app>
 </template>
 
@@ -106,11 +146,7 @@ export default {
       borderVisible: true,
       user: {},
       repos: [],
-      isLoading: true,
-      screen: {
-        height: window.screen.height,
-        width: window.screen.width
-      }
+      isLoading: true
     };
   },
   created() {
@@ -161,3 +197,37 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+
+*::selection {
+  background: #212121;
+  color: #FFFFFF;
+}
+
+#desktopPage {
+  display: none;
+}
+#mobilePage {
+  display: none;
+}
+
+@media only screen and (max-width: 950px) {
+  #desktopPage {
+    display: none;
+  }
+  #mobilePage {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  #desktopPage {
+    display: flex;
+  }
+  #mobilePage {
+    display: none;
+  }
+}
+
+</style>
