@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <v-img :src="`${publicPath}images/home_background.jpg`" style="position: fixed; max-width: 100%; max-height: 100%;" cover></v-img>
-    <v-content style="padding: 40px;">
-      <div style="height: 100%; width: 100%; border-radius: 15px; padding: 50px;" class="elevation-5 white">
+    <v-content style="padding: 40px;" v-if="!(screen.width < 960)">
+      <div style="width: 100%; border-radius: 15px; padding: 50px;" class="elevation-5 white">
         <v-row no-gutters style="height: 95%;" v-if="!isLoading">
           <v-col cols="7" align-self="center" style="padding: 30px;">
             <v-avatar size="100">
@@ -35,6 +35,11 @@
             <a href="https://www.linkedin.com/in/shardul-nalegave-370156154/" target="_blank">
               <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
                 fa-linkedin
+              </v-icon>
+            </a>
+            <a href="mailto:nalegaveshardul40@gmail.com" target="_blank">
+              <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
+                fa-envelope
               </v-icon>
             </a>
             <div style="height: 30px;"></div>
@@ -71,6 +76,18 @@
           </v-col>
         </v-row>
       </div>
+      <div style="height: 60px;"></div>
+      <div style="border-radius: 15px; padding: 50px; text-align: center;" class="elevation-5 white">
+        <h1 class="display-2" style="font-family: 'Quicksand', 'Nunito', sans-serif !important; border-bottom: 2px dashed #424242; display: inline-block; padding-left: 15px; padding-right: 15px; padding-bottom: 10px;">About Me</h1>
+        <div style="height: 30px;"></div>
+        <h1 class="body-1" style="margin-left: 120px; margin-right: 120px;">
+          I am a student in <b>S.B. Patil Public School in Ravet, Pune</b> and I currently study in 9th grade. I was born and brought up in India. I have several hobbies like studying Quantum Physics, Chemistry, listening to music <em>(I love K-POP)</em> and most importantly coding.
+        </h1>
+        <div style="height: 15px;"></div>
+        <h1 class="body-1" style="margin-left: 120px; margin-right: 120px;">
+          I started out as a <b>Web Developer</b> but as I dug deeper in the world of programming I became interested in other technologies too. I have mastered <b>Javascript</b>, <b>Python</b> and <b>Dart</b> Programming Language. Currently I like using <b>Flutter</b>, <b>Vue.js</b>, etc for my projects. I can build <b>Web</b>, <b>Desktop</b>, <b>Android</b> and <b>Command Line</b> apps. I mostly like to use Flutter for building apps. I am currently learning <b>Machine Learning</b>  and <b>AI</b> concepts using frameworks like <b>Tensorflow</b> and <b>Pytorch</b>.
+        </h1>
+      </div>
     </v-content>
   </v-app>
 </template>
@@ -90,6 +107,10 @@ export default {
       user: {},
       repos: [],
       isLoading: true,
+      screen: {
+        height: window.screen.height,
+        width: window.screen.width
+      }
     };
   },
   created() {
