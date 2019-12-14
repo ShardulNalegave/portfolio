@@ -13,6 +13,6 @@ yarn # Install the deps
 yarn serve # Serve the site
 ```
 
-============================================================================================================================
+---
 
 #### [LICENSE](https://github.com/ShardulNalegave/portfolio/blob/master/LICENSE.txt)
