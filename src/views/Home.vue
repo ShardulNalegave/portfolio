@@ -57,7 +57,7 @@
                 <h1 class="title" style="font-family: 'Overpass Mono', monospace !important;">{{ repo.name }}</h1>
                 <i><h1 class="caption" style="font-family: 'Overpass Mono', monospace !important;">{{ repo.full_name }}</h1></i>
                 <div style="height: 10px;"></div>
-                <a :href="repo.html_url" target="_blank">
+                <a :href="repo.html_url" target="_blank" style="text-decoration:none;">
                   <v-icon style="border-radius: 8px; padding: 8px; background: #FFFFFF; color: #212121; font-size: 18px;">
                     keyboard_arrow_right
                   </v-icon>
@@ -69,10 +69,12 @@
         <v-row no-gutters style="height: 5%;" v-if="!isLoading">
           <v-col cols="7"></v-col>
           <v-col cols="5">
-            <v-btn block outlined color="grey darken-4">
-              More
-              <v-icon right>arrow_right_alt</v-icon>
-            </v-btn>
+            <a :href="user.html_url" target="_blank" style="text-decoration: none;">
+              <v-btn block outlined color="grey darken-4">
+                More
+                <v-icon right>arrow_right_alt</v-icon>
+              </v-btn>
+            </a>
           </v-col>
         </v-row>
       </div>
@@ -89,44 +91,76 @@
         </h1>
       </div>
     </v-content>
-    <v-content style="padding: 40px;" id="mobilePage">
+    <v-content style="padding: 20px;" id="mobilePage">
       <div style="border-radius: 15px; padding: 40px; text-align: center;" class="elevation-5 white">
         <v-avatar size="80">
           <img :src="user.avatar_url" alt="Shardul">
         </v-avatar>
         <div style="height: 15px;"></div>
         <h1 class="title" style="font-family: 'Nunito', sans-serif !important;">Hello, I am</h1>
-        <h1 class="display-1" style="font-family: 'Quicksand', 'Nunito', sans-serif !important; font-size: 40px !important;">{{ user.name }}</h1>
+        <h1 class="display-1" style="font-family: 'Quicksand', 'Nunito', sans-serif !important; font-size: 30px !important; font-weight: bold;">{{ user.name }}</h1>
         <div style="height: 10px;"></div>
           <h1 class="subtitle-1" style="font-family: 'Overpass Mono', monospace !important; font-size: 13px !important;">
             {{ user.location }}
           </h1>
           <div style="height: 20px;"></div>
           <a :href="user.html_url" target="_blank" style="text-decoration: none;">
-            <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
+            <v-icon style="border-radius: 10px; padding: 6px; background: #212121; color: #FFFFFF; margin: 2px;">
               fa-github
             </v-icon>
           </a>
           <a href="https://www.instagram.com/shardul_nalegave/" target="_blank" style="text-decoration: none;">
-            <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
+            <v-icon style="border-radius: 10px; padding: 6px; background: #212121; color: #FFFFFF; margin: 2px;">
               fa-instagram
             </v-icon>
           </a>
           <a href="https://medium.com/@nalegaveshardul40" target="_blank" style="text-decoration: none;">
-            <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
+            <v-icon style="border-radius: 10px; padding: 6px; background: #212121; color: #FFFFFF; margin: 2px;">
               fa-medium
             </v-icon>
           </a>
           <a href="https://www.linkedin.com/in/shardul-nalegave-370156154/" target="_blank" style="text-decoration: none;">
-            <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
+            <v-icon style="border-radius: 10px; padding: 6px; background: #212121; color: #FFFFFF; margin: 2px;">
               fa-linkedin
             </v-icon>
           </a>
           <a href="mailto:nalegaveshardul40@gmail.com" target="_blank" style="text-decoration: none;">
-            <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
+            <v-icon style="border-radius: 10px; padding: 6px; background: #212121; color: #FFFFFF; margin: 2px;">
               fa-envelope
             </v-icon>
           </a>
+      </div>
+      <div style="height: 60px;"></div>
+      <div style="border-radius: 15px; padding: 30px; text-align: center;" class="elevation-5 white">
+        <h1 class="headline" style="font-family: 'Quicksand', 'Nunito', sans-serif !important; border-bottom: 2px dashed #424242; display: inline-block; padding-left: 15px; padding-right: 15px; padding-bottom: 10px; font-weight: bold;">About Me</h1>
+        <div style="height: 30px;"></div>
+        <h1 class="body-2" style="">
+          I am a student in <b>S.B. Patil Public School in Ravet, Pune</b> and I currently study in 9th grade. I was born and brought up in India. I have several hobbies like studying Quantum Physics, Chemistry, listening to music <em>(I love K-POP)</em> and most importantly coding.
+        </h1>
+        <div style="height: 15px;"></div>
+        <h1 class="body-2" style="">
+          I started out as a <b>Web Developer</b> but as I dug deeper in the world of programming I became interested in other technologies too. I have mastered <b>Javascript</b>, <b>Python</b> and <b>Dart</b> Programming Language. Currently I like using <b>Flutter</b>, <b>Vue.js</b>, etc for my projects. I can build <b>Web</b>, <b>Desktop</b>, <b>Android</b> and <b>Command Line</b> apps. I mostly like to use Flutter for building apps. I am currently learning <b>Machine Learning</b>  and <b>AI</b> concepts using frameworks like <b>Tensorflow</b> and <b>Pytorch</b>.
+        </h1>
+      </div>
+      <div style="height: 60px;"></div>
+      <div style="border-radius: 15px; padding: 30px;" class="elevation-5 white">
+        <div class="elevation-2 grey darken-4 white--text" v-for="repo in repos" v-bind:key="repo.id" style="padding: 20px; margin: 10px; border-radius: 8px;">
+          <h1 class="title" style="font-family: 'Overpass Mono', monospace !important;">{{ repo.name }}</h1>
+          <i><h1 class="caption" style="font-family: 'Overpass Mono', monospace !important; font-size: 8px !important;">{{ repo.full_name }}</h1></i>
+          <div style="height: 10px;"></div>
+          <a :href="repo.html_url" target="_blank" style="text-decoration:none;">
+            <v-icon style="border-radius: 8px; padding: 8px; background: #FFFFFF; color: #212121; font-size: 18px;">
+              keyboard_arrow_right
+            </v-icon>
+          </a>
+        </div>
+        <div style="height: 20px;"></div>
+        <a :href="user.html_url" target="_blank" style="text-decoration: none;">
+          <v-btn block outlined color="grey darken-4">
+            More
+            <v-icon right>arrow_right_alt</v-icon>
+          </v-btn>
+        </a>
       </div>
     </v-content>
   </v-app>
