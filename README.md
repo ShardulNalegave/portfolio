@@ -1,19 +1,14 @@
-# portfolio
 
-## Project setup
-```
-yarn install
-```
+# Portfolio Site
+My Portfolio Site (built with vue.js)
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+# Run
+To run do the following :-
+```bash
+	# Clone the repo
+	git clone https://github.com/ShardulNalegave/portfolio.git portfolio-site
+	cd portfolio-site
 
-### Compiles and minifies for production
+	yarn # Install the deps
+	yarn serve # Serve the site
 ```
-yarn build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
