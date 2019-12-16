@@ -92,6 +92,30 @@
           I started out as a <b>Web Developer</b> but as I dug deeper in the world of programming I became interested in other technologies too. I have mastered <b>Javascript</b>, <b>Python</b> and <b>Dart</b> Programming Language. Currently I like using <b>Flutter</b>, <b>Vue.js</b>, etc for my projects. I can build <b>Web</b>, <b>Desktop</b>, <b>Android</b> and <b>Command Line</b> apps. I mostly like to use Flutter for building apps. I am currently learning <b>Machine Learning</b>  and <b>AI</b> concepts using frameworks like <b>Tensorflow</b> and <b>Pytorch</b>.
         </h1>
       </div>
+      <div style="height: 60px;"></div>
+      <div style="border-radius: 15px; padding: 50px; text-align: center;" class="elevation-5 white">
+        <h1 class="display-2" style="font-family: 'Quicksand', 'Nunito', sans-serif !important; border-bottom: 2px dashed #424242; display: inline-block; padding-left: 15px; padding-right: 15px; padding-bottom: 10px;">Achievements</h1>
+        <div style="height: 30px;"></div>
+        <v-row no-gutters>
+          <v-col align-self="center">
+            <div class="elevation-2 grey darken-4 white--text" style="padding: 30px; margin: 10px; border-radius: 8px; text-align: start;">
+              <h1 class="headline" style="font-family: 'Overpass Mono', monospace !important;">Winner Of State Level CBSE Science Exhibition</h1>
+              <div style="height: 10px;"></div>
+              <h1 class="body-2 text--grey text--lighten-3" style="font-family: 'Overpass Mono', monospace !important;">I came first in the state level of CBSE Science Exhibition in the Transport and Communication category. I was qualified for the Nationals and went till the final round but was unsuccessful due to some last minute technical problems.</h1>
+            </div>
+            <div class="elevation-2 grey darken-4 white--text" style="padding: 30px; margin: 10px; border-radius: 8px; text-align: start;">
+              <h1 class="headline" style="font-family: 'Overpass Mono', monospace !important;">Winner of Regionals of RCJ (Robo-Cup Junior) </h1>
+              <div style="height: 10px;"></div>
+              <h1 class="body-2 text--grey text--lighten-3" style="font-family: 'Overpass Mono', monospace !important;">I had also won the regionals of RCJ Robotics Competition held in Bangalore (as the regionals were for whole South India) with my team. We had qualified for the Nationals but our robot had some structural issues which led to us not winning.</h1>
+            </div>
+          </v-col>
+          <v-col style="padding-left: 30px; padding-right: 30px;" align-self="center">
+            <div class="grey darken-4 white--text elevation-8" style="padding: 30px; border-radius: 8px;">
+              <h1 class="display-1" style="font-family: 'OverpassMono', monospace !important;">Audible Reality</h1>
+            </div>
+          </v-col>
+        </v-row>
+      </div>
     </v-content>
     <v-content style="padding: 20px;" id="mobilePage">
       <div style="border-radius: 15px; padding: 40px; text-align: center;" class="elevation-5 white">
