@@ -48,6 +48,8 @@
               <div style="width: 10px; display: inline-block;"></div>
               <h1 class="headline" style="display: inline-block; font-family: 'Overpass Mono', monospace !important; border-bottom: 1px dashed #424242; padding-right: 5px;" :style="`border-right: ${borderVisible ? '5px solid #424242' : 'none'};`">{{ typingWord }}</h1>
             </div>
+            <div style="height: 30px;"></div>
+            <v-btn outlined color="grey darken-4" x-large @click="$vuetify.goTo('#aboutSection', {})">About Me</v-btn>
           </v-col>
           <v-col cols="5" style="height: 100%;">
             <h1 class="display-1">My Projects</h1>
@@ -79,7 +81,7 @@
         </v-row>
       </div>
       <div style="height: 60px;"></div>
-      <div style="border-radius: 15px; padding: 50px; text-align: center;" class="elevation-5 white">
+      <div style="border-radius: 15px; padding: 50px; text-align: center;" class="elevation-5 white" id="aboutSection">
         <h1 class="display-2" style="font-family: 'Quicksand', 'Nunito', sans-serif !important; border-bottom: 2px dashed #424242; display: inline-block; padding-left: 15px; padding-right: 15px; padding-bottom: 10px;">About Me</h1>
         <div style="height: 30px;"></div>
         <h1 class="body-1" style="margin-left: 120px; margin-right: 120px;">
