@@ -114,7 +114,7 @@
               <h1 class="display-1" style="font-family: 'OverpassMono', monospace !important;">Audible Reality</h1>
               <div style="height: 25px;"></div>
               <h1 class="body-2 text--grey text--lighten-3" style="font-family: 'Overpass Mono', monospace !important;">
-                <b>Audible Reality</b> is my flagship project. It is a helper app with a personal assistant for visually challenged people. Visually challenged people are deprieved of several privilages like they cannot use the amazing features given to us by the developing technology! So I decided to make an app for them so that they can access those features and at the same time it converts the Virtual Reality to Audible Reality thus, <b>Audible Reality</b>.
+                <b>Audible Reality</b> is my flagship project. It is a helper app with a personal assistant for visually challenged people. Visually challenged people are deprived of several privileges like they cannot use the amazing features given to us by the developing technology! So I decided to make an app for them so that they can access those features and at the same time it converts the Virtual Reality to Audible Reality thus, <b>Audible Reality</b>.
                 <br><br>
                 I had originally built it for CBSE Science Exhibition with little hope that it will be so successful. But its widespread recognition made me think about it seriously, and, of course, I recieved first rank in the exhibition because of this project. Till now it has been presented in several exhibitions and has a streak of never losing. I hope that I can have my own startup with this project soon!
               </h1>
@@ -216,7 +216,7 @@
         <h1 class="headline" style="font-family: 'Quicksand', 'Nunito', sans-serif !important; border-bottom: 2px dashed #424242; display: inline-block; padding-left: 15px; padding-right: 15px; padding-bottom: 10px; font-weight: bold;">Audible Reality</h1>
         <div style="height: 40px;"></div>
         <h1 class="body-2 text--grey text--lighten-3" style="font-family: 'Overpass Mono', monospace !important;">
-          <b>Audible Reality</b> is my flagship project. It is a helper app with a personal assistant for visually challenged people. Visually challenged people are deprieved of several privilages like they cannot use the amazing features given to us by the developing technology! So I decided to make an app for them so that they can access those features and at the same time it converts the Virtual Reality to Audible Reality thus, <b>Audible Reality</b>.
+          <b>Audible Reality</b> is my flagship project. It is a helper app with a personal assistant for visually challenged people. Visually challenged people are deprived of several privileges like they cannot use the amazing features given to us by the developing technology! So I decided to make an app for them so that they can access those features and at the same time it converts the Virtual Reality to Audible Reality thus, <b>Audible Reality</b>.
           <br><br>
           I had originally built it for CBSE Science Exhibition with little hope that it will be so successful. But its widespread recognition made me think about it seriously, and, of course, I recieved first rank in the exhibition because of this project. Till now it has been presented in several exhibitions and has a streak of never losing. I hope that I can have my own startup with this project soon!
         </h1>
