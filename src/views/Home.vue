@@ -22,11 +22,6 @@
                 fa-github
               </v-icon>
             </a>
-            <a href="https://www.instagram.com/shardul_nalegave/" target="_blank" style="text-decoration: none;">
-              <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
-                fa-instagram
-              </v-icon>
-            </a>
             <a href="https://medium.com/@nalegaveshardul40" target="_blank" style="text-decoration: none;">
               <v-icon style="border-radius: 10px; padding: 8px; background: #212121; color: #FFFFFF; margin: 5px;">
                 fa-medium
@@ -139,11 +134,6 @@
           <a :href="user.html_url" target="_blank" style="text-decoration: none;">
             <v-icon style="border-radius: 10px; padding: 6px; background: #212121; color: #FFFFFF; margin: 2px;">
               fa-github
-            </v-icon>
-          </a>
-          <a href="https://www.instagram.com/shardul_nalegave/" target="_blank" style="text-decoration: none;">
-            <v-icon style="border-radius: 10px; padding: 6px; background: #212121; color: #FFFFFF; margin: 2px;">
-              fa-instagram
             </v-icon>
           </a>
           <a href="https://medium.com/@nalegaveshardul40" target="_blank" style="text-decoration: none;">
