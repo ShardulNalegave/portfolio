@@ -85,7 +85,7 @@
         <h1 class="display-2" style="font-family: 'Quicksand', 'Nunito', sans-serif !important; border-bottom: 2px dashed #424242; display: inline-block; padding-left: 15px; padding-right: 15px; padding-bottom: 10px;">About Me</h1>
         <div style="height: 30px;"></div>
         <h1 class="body-1" style="margin-left: 120px; margin-right: 120px;">
-          I am a student in <b>S.B. Patil Public School in Ravet, Pune</b> and I currently study in 9th grade. I was born and brought up in India. I have several hobbies like studying Quantum Physics, Chemistry, listening to music <em>(I love K-POP)</em> and most importantly coding.
+          I am a student in <b>S.B. Patil Public School in Ravet, Pune</b> and I currently study in 10th grade. I like studying Quantum Physics, Chemistry, listening to music <em>(I love K-POP)</em> and most importantly coding.
         </h1>
         <div style="height: 15px;"></div>
         <h1 class="body-1" style="margin-left: 120px; margin-right: 120px;">
@@ -167,7 +167,7 @@
         <h1 class="headline" style="font-family: 'Quicksand', 'Nunito', sans-serif !important; border-bottom: 2px dashed #424242; display: inline-block; padding-left: 15px; padding-right: 15px; padding-bottom: 10px; font-weight: bold;">About Me</h1>
         <div style="height: 30px;"></div>
         <h1 class="body-2" style="">
-          I am a student in <b>S.B. Patil Public School in Ravet, Pune</b> and I currently study in 9th grade. I was born and brought up in India. I have several hobbies like studying Quantum Physics, Chemistry, listening to music <em>(I love K-POP)</em> and most importantly coding.
+          I am a student in <b>S.B. Patil Public School in Ravet, Pune</b> and I currently study in 10th grade. I like studying Quantum Physics, Chemistry, listening to music <em>(I love K-POP)</em> and most importantly coding.
         </h1>
         <div style="height: 15px;"></div>
         <h1 class="body-2" style="">
