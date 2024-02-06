@@ -12,6 +12,10 @@ export default function Sidebar() {
           <div className="grow"></div>
           <div className="flex-none">
             <Link to='/' className="text-5xl font-display hover:underline cursor-pointer">Shardul<br />Nalegave</Link>
+            <div className='h-[20px]'></div>
+            <Link to='/about' className='font-mono hover:underline'>- About</Link>
+            <br />
+            <Link to='/posts' className='font-mono hover:underline'>- Posts</Link>
           </div>
         </div>
       </div>
@@ -35,6 +39,10 @@ export default function Sidebar() {
           </div>
           <div className='h-[30px]'></div>
           <Link to='/' className="text-2xl font-display hover:underline cursor-pointer underline">Shardul Nalegave</Link>
+          <div className='h-[20px]'></div>
+          <Link to='/about' className='font-mono hover:underline' onClick={() => setShowDrawer(false)}>- About</Link>
+          <br />
+          <Link to='/posts' className='font-mono hover:underline' onClick={() => setShowDrawer(false)}>- Posts</Link>
         </div>
       </div>
     </>

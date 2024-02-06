@@ -1,6 +1,7 @@
 
 import { Blockquote } from './blockquote';
 import { Heading1, Heading2, Heading3, Heading4, Heading5, Heading6 } from './heading';
+import { OrderedList, UnorderedList } from './lists';
 
 export const components = {
   h1: Heading1,
@@ -10,4 +11,6 @@ export const components = {
   h5: Heading5,
   h6: Heading6,
   blockquote: Blockquote,
+  ul: UnorderedList,
+  ol: OrderedList,
 };
