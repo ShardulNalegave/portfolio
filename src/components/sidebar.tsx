@@ -16,6 +16,15 @@ export default function Sidebar() {
             <Link to='/about' className='font-mono hover:underline'>- About</Link>
             <br />
             <Link to='/posts' className='font-mono hover:underline'>- Posts</Link>
+            <br />
+            <div className='h-[15px]'></div>
+            <div className='border-dashed border-zinc-100 border-t-[1px]'></div>
+            <div className='h-[15px]'></div>
+            <a href="https://github.com/ShardulNalegave" target='_blank' rel="noopener noreferrer" className='font-mono hover:underline' onClick={() => setShowDrawer(false)}>- GitHub</a>
+            <br />
+            <a href="https://www.linkedin.com/in/shardul-nalegave/" target='_blank' rel="noopener noreferrer" className='font-mono hover:underline' onClick={() => setShowDrawer(false)}>- LinkedIn</a>
+            <br />
+            <a href="https://twitter.com/ShardulNalegave" target='_blank' rel="noopener noreferrer" className='font-mono hover:underline' onClick={() => setShowDrawer(false)}>- Twitter</a>
           </div>
         </div>
       </div>
@@ -33,7 +42,10 @@ export default function Sidebar() {
           </div>
         </div>
 
-        <div className={`fixed top-0 right-0 left-0 bottom-0 overflow-x-hidden overlow-y-scroll bg-zinc-900 text-white p-[30px] ${showDrawer ? 'block' : 'hidden'}`}>
+        <div
+          className={`fixed top-0 right-0 left-0 bottom-0 overflow-x-hidden overlow-y-scroll bg-zinc-900 text-white p-[30px] ${showDrawer ? 'block' : 'hidden'}`}
+          style={{ zIndex: 5 }}
+        >
           <div className='fixed top-0 right-0 p-[15px] cursor-pointer' onClick={() => setShowDrawer(false)}>
             <IconX />
           </div>
@@ -43,6 +55,15 @@ export default function Sidebar() {
           <Link to='/about' className='font-mono hover:underline' onClick={() => setShowDrawer(false)}>- About</Link>
           <br />
           <Link to='/posts' className='font-mono hover:underline' onClick={() => setShowDrawer(false)}>- Posts</Link>
+          <br />
+          <div className='h-[15px]'></div>
+          <div className='border-dashed border-zinc-100 border-t-[1px]'></div>
+          <div className='h-[15px]'></div>
+          <a href="https://github.com/ShardulNalegave" target='_blank' rel="noopener noreferrer" className='font-mono hover:underline' onClick={() => setShowDrawer(false)}>- GitHub</a>
+          <br />
+          <a href="https://www.linkedin.com/in/shardul-nalegave/" target='_blank' rel="noopener noreferrer" className='font-mono hover:underline' onClick={() => setShowDrawer(false)}>- LinkedIn</a>
+          <br />
+          <a href="https://twitter.com/ShardulNalegave" target='_blank' rel="noopener noreferrer" className='font-mono hover:underline' onClick={() => setShowDrawer(false)}>- Twitter</a>
         </div>
       </div>
     </>

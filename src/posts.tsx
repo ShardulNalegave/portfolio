@@ -1,7 +1,7 @@
 
-import { ComponentType, Suspense, lazy } from 'react';
-import Page from './components/page';
+import { ComponentType, lazy } from 'react';
 import { components } from './components/mdx/mdx';
+import { PostView } from './views/post';
 
 const POSTS = import.meta.glob('/src/posts/**/[a-z[]*.mdx');
 
@@ -17,11 +17,7 @@ export const postsRoutes = Object.keys(POSTS).map(path => {
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const View = lazy(POSTS[path] as () => Promise<{ default: ComponentType<any> }>);
-  return { path: routePath, element: <Page>
-    <Suspense fallback={<>Loading...</>}>
-      <View components={components} />
-    </Suspense>
-  </Page> };
+  return { path: routePath, element: <PostView><View components={components} /></PostView>};
 });
 
 export function getAllPostsMeta(): IPostMeta[] {
