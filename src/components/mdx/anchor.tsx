@@ -1,7 +1,8 @@
+import { ReactNode } from 'react';
 
 export function Anchor(props: {
-  href: string,
-  children: string,
+  href?: string,
+  children?: ReactNode,
 }) {
   console.log(props);
   return (
