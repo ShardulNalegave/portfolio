@@ -2,7 +2,7 @@ import { DetailedHTMLProps } from 'react';
 
 export function Heading1(props : DetailedHTMLProps<React.HTMLAttributes<HTMLHeadingElement>, HTMLHeadElement>) {
   return (
-    <h1 className={`text-4xl font-display ${props.className}`} id={props.id}>
+    <h1 className={`text-4xl font-display mb-[20px] ${props.className}`} id={props.id}>
       <span className='text-3xl text-zinc-950 inline-block'>#</span> {props.children}
     </h1>
   );

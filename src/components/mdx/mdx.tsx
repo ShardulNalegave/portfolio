@@ -1,4 +1,5 @@
 
+import { Anchor } from './anchor';
 import { Blockquote } from './blockquote';
 import { Heading1, Heading2, Heading3, Heading4, Heading5, Heading6 } from './heading';
 import { OrderedList, UnorderedList } from './lists';
@@ -13,4 +14,5 @@ export const components = {
   blockquote: Blockquote,
   ul: UnorderedList,
   ol: OrderedList,
+  a: Anchor,
 };
