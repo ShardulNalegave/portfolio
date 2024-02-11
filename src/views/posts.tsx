@@ -6,6 +6,7 @@ import { getAllPostsMeta, postFilepathToRoutePath } from '../posts';
 import { Link } from 'react-router-dom';
 
 export function PostsView() {
+  document.title = 'Posts - Shardul Nalegave';
   const postMetas = getAllPostsMeta();
 
   return (

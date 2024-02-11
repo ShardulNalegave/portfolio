@@ -17,7 +17,11 @@ export const postsRoutes = Object.keys(POSTS).map(path => {
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const View = lazy(POSTS[path] as () => Promise<{ default: ComponentType<any> }>);
-  return { path: routePath, element: <PostView><View components={components} /></PostView>};
+  return {
+    path: routePath,
+    loader: async () => (await (POSTS[path])() as { frontmatter: unknown }).frontmatter,
+    element: <PostView><View components={components} /></PostView>,
+  };
 });
 
 export function getAllPostsMeta(): IPostMeta[] {
