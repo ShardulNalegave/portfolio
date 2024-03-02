@@ -12,7 +12,7 @@ export function PostsView() {
   return (
     <Page>
       <Heading1>Posts</Heading1>
-      <div className='h-[30px]'></div>
+      <div className='h-[5px]'></div>
 
       {postMetas.sort((a, b) => {
         return moment(a.date, 'DD[/]MM[/]YYYY').isBefore(moment(b.date, 'DD[/]MM[/]YYYY')) ? 1 : -1;
