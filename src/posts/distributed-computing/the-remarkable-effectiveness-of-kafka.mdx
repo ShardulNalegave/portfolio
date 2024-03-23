@@ -1,0 +1,62 @@
+---
+title: "The Remarkable Effectiveness of Kafka"
+description: "ABCEDF"
+date: "23/3/2024"
+---
+
+# The Remarkable Effectiveness of Kafka
+In this era of modern data processing where every millisecond matters and every byte of information is important, one technology stands as a beacon of efficiency and reliability, **Apache Kafka**.
+
+Imagine a world where massive amounts of data flow seamlessly and swiftly, where real-time analytics and decision-making are not just a possibility but a reality. This is the world that Kafka has helped create.
+
+In this post, we will talk about what Kafka exactly is, and explore its core concepts, key features, and its use cases. We'll see how Kafka is not just another message broker but something that finds its use in just so many places.
+
+## What exactly is Kafka?
+If you search this on Google it will give you something like:-
+
+> Apache Kafka is a distributed event store and stream-processing platform. It is an open-source system developed by the Apache Software Foundation and written in Java and Scala. The project aims to provide a unified, high-throughput, low-latency platform for handling real-time data feeds.
+
+Now while it manages to list every major detail about Kafka in only a few lines, it's not necessarily informative for someone completely new to it. So let's understand what it is through a very simple example.
+
+Suppose we want to build an E-Commerce site and to do this we chose a microservices-based architecture. Each step of the process is handled by a microservice, i.e. placing an order, checking inventory, shipping, etc. Why microservices? Well, it helps us separate parts of the business logic and can help us handle massive amounts of traffic on the site. But now there is one big problem, how do we handle communication between these services? The simplest option would of course be to build a RESTful API for each service and handle communication through it, but it isn't a very efficient solution and can get very complicated very quickly.
+
+This is where Kafka steps in, it can act as a message-broker and help you manage inter-service or east-west communication in your application. Kafka lets you create topics to which messages can be sent. Say an order was just placed, then you can send a message with the order details to a topic we'll call "placed_orders". Then you can have another service that listens to this topic for incoming messages and as soon as a message is received checks if the product is in the inventory and if so then calls another service to initiate shipping. And there you go! You now have a very simple, easy-to-understand, and managed data pipeline for your application.
+
+## How does it work?
+It was a little surprising how simple Kafka's architecture is. There are only three major components in Kafka:-
+- **Broker:** A broker is a single instance of Apache Kafka. Brokers handle message storage, replication, and retrieval, serving as the intermediaries between producers and consumers in the Kafka cluster. Each broker has a unique ID assigned to it. A group of such brokers helps form a distributed, fault-tolerant messaging system.
+- **Producer:** As the name suggests, a producer is responsible for the creation of messages. Ingestion of messages by producers can be done both synchronously or asynchronously.
+- **Consumer:** Again, as the name suggests, a consumer is responsible for the consumption of messages from one or more topics and their partitions.
+
+And that's it! Well, not really. While they are the three major components, one cannot make good use of Kafka without understanding how topics and partitions work.
+- **Topics:** Topics are basically data feeds. Producers write to them and consumers consume from them. One important thing to note here is that topics are append-only, that is, messages can only be written, and they cannot be updated or deleted. Topics can further be divided into partitions.
+- **Partitions:** With huge amounts of data being produced in most cases, topics can get quite large. Thus, it makes sense to divide them into separate partitions based on any user-defined strategy. Producers can write to specific partitions while consumers can read from specific ones.
+- **Consumer Groups:** Probably the most confusing term here, they offer a very interesting benefit which we will talk about in the next section. Consumers are part of Consumer Groups in such a way that:-
+  - A consumer can subscribe to multiple partitions of a topic.
+  - However, a partition can be subscribed by only a single consumer from a consumer group.
+
+## Queue or Pub-Sub? It's got both.
+First, we should talk about what queues and pub-sub are:-
+- **Queue:** A write-once consume-once kind of architecture is known as a queue.
+- **Pub-Sub:** Pub-Sub i.e. Publish-Subscribe architecture is of the WORM kind (Write-once Read-Many).
+
+Most message brokers choose one architecture. For example, RabbitMQ started with a queue architecture (later on pub-sub support was added too). Kafka from the beginning was built to support both. They do this using Consumer Groups.
+
+It's easy to understand how Pub-Sub is implemented. Put each consumer in a different consumer group and they will all receive messages as they are published. But what about queues? How do we ensure messages are consumed only once?
+
+Remember the two rules for consumers in a consumer group? Well doing that resulted in something very interesting. Say we have a topic "A" with two partitions - 0 and 1. If we have only one consumer in the consumer group who listens to both partitions, it's already a queue! Each message is consumed only once. If we have two consumers - one listening to partition 0 and the other listening to partition 1, again, it's already a queue! A message sent to either partition will be consumed exactly once! What about a third consumer? In this example, there is no way for a third consumer to exist as there are no partitions to listen to! The current consumer group already listens to all partitions.
+
+So basically,
+- Put consumers in separate consumer-groups to achieve pub-sub.
+- Put consumers in a single consumer-group to achieve queues.
+
+## Did you say Distributed???
+Yes! Apache Kafka is highly scalable horizontally and offers amazing performance. How does it do this?
+- **Broker Cluster:** Each cluster consists of many brokers that store and manage data. This distributed architecture helps handle large volumes of data and provides fault tolerance in case of broker failure.
+- **Topic Partitions:** Each Kafka topic is divided into one or more partitions, which are distributed across the brokers in the cluster. This allows Kafka to parallelize the storage and processing of messages, allowing for high throughput and scalability.
+- **Replication:** Kafka follows a leader-follower pattern for its partitions. For each partition, one broker is selected as the leader and is responsible for handling reads and writes while followers replicate its data and handle only reads. This provides fault tolerance. Also, if a broker fails then another one can be elected as the leader ensuring data remains available.
+- **ZooKeeper:** Kafka uses Apache ZooKeeper to manage its broker cluster. ZooKeeper tracks brokers and stores relevant metadata about them. It also handles the leader-follower relationships and helps elect new leaders.
+
+Its distributed architecture, with broker clusters, topic partitions, and replication, enables Kafka to handle large volumes of data with ease while ensuring fault tolerance and high availability.
+
+By decoupling producers and consumers through topics and partitions, Kafka enables highly scalable and parallel processing of data, making it ideal for building real-time data pipelines, event-driven architectures, and streaming analytics platforms. As we continue to embrace the era of big data, Kafka has stood strong as the go-to option for modern data infrastructures.

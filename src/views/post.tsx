@@ -14,17 +14,20 @@ export function PostView({ children } : {
 
   return (
     <Page>
-      <div className='rounded p-[25px] bg-zinc-100'>
+      <div className='rounded p-[25px] bg-zinc-100 lg:w-[65%]'>
         <Heading3>{data.title}</Heading3>
         <div className='h-[5px]'></div>
         <p className='text-sm'>{data.description}</p>
         <div className='h-[10px]'></div>
         <p className='text-sm text-zinc-700'><span className='font-bold'>Posted:</span> {moment(data.date, 'DD[/]MM[/]YYYY').format('Do MMMM[,] YYYY')}</p>
       </div>
-      <div className='h-[50px]'></div>
+      <div className='h-[20px]'></div>
       <Suspense fallback={<>Loading...</>}>
-        {children}
+        <div className='lg:w-[65%]'>
+          {children}
+        </div>
       </Suspense>
+      <div className='h-[100px]'></div>
     </Page>
   );
 }
